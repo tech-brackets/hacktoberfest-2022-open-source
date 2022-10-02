@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        min-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      th {
+        cursor: pointer;
+      }
+      th,
+      td {
+        border: 2.5px #000 solid;
+      }
+    </style>
+    <script defer src="RezhaIkhwanHshortTable.js"></script>
+    <title>short table</title>
+  </head>
+  <body>
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th onclick="sort(1)">nama</th>
+          <th onclick="sort(2)">tanggal</th>
+          <th onclick="sort(3)">waktu</th>
+          <th onclick="sort(4)">lokasi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>jamal</td>
+          <td>2022-02-03</td>
+          <td>20:20</td>
+          <td>jalan raya</td>
+        </tr>
+        <tr>
+          <td>udin</td>
+          <td>2022-07-13</td>
+          <td>12:20</td>
+          <td>jalan gagak</td>
+        </tr>
+        <tr>
+          <td>renal</td>
+          <td>2021-09-23</td>
+          <td>07:50</td>
+          <td>jalan pipit</td>
+        </tr>
+        <tr>
+          <td>rinai</td>
+          <td>2022-07-13</td>
+          <td>23:20</td>
+          <td>jalan jalak</td>
+        </tr>
+        <tr>
+          <td>rinai</td>
+          <td>2020-07-13</td>
+          <td>19:23</td>
+          <td>jalan asia</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
