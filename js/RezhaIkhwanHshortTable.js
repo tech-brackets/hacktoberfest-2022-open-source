@@ -10,6 +10,7 @@
         <th onclick="sort(4)">lokasi</th>
     </tr>
 // </thead> */}
+
 function sort(val) {
     const index = (isNaN(val) ? val.value : val) - 1
     const tabel = document.getElementById('myTable')
