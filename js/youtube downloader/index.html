@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="script.js"></script>
+    <title>Document</title>
+    <style>
+      body * {
+        font-family: arial;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      body div {
+        width: 40%;
+      }
+      #form {
+        position: relative;
+        padding: 10px;
+        width: 50%;
+        height: 50%;
+        background: rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      #form div {
+        width: 100%;
+      }
+      #form div input {
+        width: 100%;
+        padding: 4px;
+        border-radius: 8px;
+        outline: none;
+        border: 2px rgba(0, 0, 0, 0.5) solid;
+        box-sizing: border-box;
+      }
+      #form button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 8px;
+        border: 2px rgba(0, 0, 0, 0.507) solid;
+        padding: 5px;
+        width: 50px;
+        height: 25px;
+        cursor: pointer;
+        left: calc(100% - 50px);
+        box-sizing: border-box;
+        margin-top: 20px;
+      }
+      div#loading span:nth-child(1) {
+        animation: spin 1s infinite linear;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-bottom: 5px blue solid;
+        border-right: 5px blue solid;
+        border-radius: 50%;
+      }
+      div#loading {
+        display: none;
+      }
+      .dowload {
+        display: block;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="loading"><span></span> <span>LOADING....!!!</span></div>
+      <div id="radioLink">
+        <input
+          type="radio"
+          id="mp3"
+          name="fav_language"
+          value="https://yt-downloader-api-v1.herokuapp.com/api/v1/audio-only"
+          checked
+        />
+        <label for="mp3">mp3</label><br />
+        <input
+          type="radio"
+          id="css"
+          name="fav_language"
+          value="https://yt-downloader-api-v1.herokuapp.com/api/v1/video-with-audio"
+        />
+        <label for="css">mp4</label><br />
+      </div>
+      <form
+        id="form"
+        method="post"
+        action="https://yt-downloader-api-v1.herokuapp.com/api/v1/audio-only"
+      >
+        <div>
+          <h3>masukan link:</h3>
+          <input
+            id="input"
+            type="text"
+            placeholder="https://youtu.be/3McjKJZHSc4"
+            required
+          />
+        </div>
+        <button type="submit">proses</button>
+      </form>
+      <h2 id="judulVidio"></h2>
+    </div>
+  </body>
+</html>
