@@ -15,11 +15,7 @@ form.addEventListener("submit", async e => {
     loading.style.display = "block"
     data.append('link', document.querySelector("#form input").value);
 
-    if (elemenDownload.length > 0) {
-        elemenDownload.forEach(e => {
-            e.remove();
-        })
-    }
+    if (elemenDownload.length > 0) Array.from(elemenDownload).map(e => e.remove())
 
     try {
         const fect = await fetch(form.action, {
